@@ -44,8 +44,26 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda install jupyter
    ```
   
-You have just set up your *base environment*. Think of it as a reproducible blueprint for 
+You have just set up your *base environment*, the minimal software necessary to install and run other conda packages. Best practice is to keep only a
+minimal installation of conda here, and to create a new environment for each of your common use cases. Let's do that next.
 
+7. My basic data analysis toolbox uses Python 3 and a few common packages:
+   ```
+   conda create --name py3
+
+   # change environments by 'activating it'
+   conda activate py3
+
+   # install data analysis tools
+   conda install python numpy pandas scipy statsmodels scikit-learn
+
+   # data visualization tools
+   conda install matplotlib seaborn
+
+   conda deactivate
+   ```
+
+8. 
 
 [^1]: [Mac OS] This is the Terminal app. [Windows] [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is your
   best friend, but mounting drives is a bitch and a half. [Linux] Bash Shell.
