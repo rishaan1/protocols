@@ -44,8 +44,8 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda install jupyter
    ```
   
-You have just set up your *base environment*, the minimal software necessary to install and run other conda packages. Best practice is to keep only a
-minimal installation of conda here, and to create a new environment for each of your common use cases. Let's do that next.
+   You have just set up your *base environment*, the minimal software necessary to install and run other conda packages. Best practice is to keep only 
+   a minimal installation of conda here, and to create a new environment for each of your common use cases. Let's do that next.
 
 7. My basic data analysis toolbox uses Python 3 and a few common packages:
    ```
