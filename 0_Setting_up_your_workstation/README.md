@@ -60,11 +60,21 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    # data visualization tools
    conda install matplotlib seaborn
 
+   # ipykernel gives the jupyter access to this environment and all packages installed here.
+   conda install ipykernel
+   python -m ipykernel install --user --name py3 --display-name "py3"
+
    conda deactivate
    ```
+   While your conda environment is active, the packages installed in that environment are added to your $PATH and available for use via Python, bash, or however you normally access them.
 
-8. 
-
+8. You are now ready to use your new Python environment! Run
+   ```
+   jupyter lab
+   ```
+   If the installation was successful, this command will open a web browser with the `jupyter lab` interface. If you're new to jupyter, follow the
+   guided tour. Stay tuned for more tutorials!
+   
 [^1]: [Mac OS] This is the Terminal app. [Windows] [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is your
   best friend, but mounting drives is a bitch and a half. [Linux] Bash Shell.
 [^2]: `conda` is the package manager software itself. There are other flavors of essentially the same thing, with the following 
