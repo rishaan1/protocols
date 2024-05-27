@@ -76,7 +76,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    guided tour. Stay tuned for more tutorials!
    
 [^1]: [Mac OS] This is the Terminal app. [Windows] [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is your
-  best friend, but mounting drives is a bitch and a half. [Linux] Bash Shell.
+  best friend, but mounting drives is difficult. [Linux] Bash Shell.
 [^2]: `conda` is the package manager software itself. There are other flavors of essentially the same thing, with the following 
   notable differences:
     - `anaconda` is developed by Anaconda, Inc. and comes with lots of packages preinstalled. 
