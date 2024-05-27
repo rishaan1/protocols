@@ -73,7 +73,8 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    jupyter lab
    ```
    If the installation was successful, this command will open a web browser with the `jupyter lab` interface. If you're new to jupyter, follow the
-   guided tour. Stay tuned for more tutorials!
+   guided tour. Stay tuned for more tutorials.
+   ![jupyter](../docs/0-jupyter-landing.png)
    
 [^1]: [Mac OS] This is the Terminal app. [Windows] [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) is your
   best friend, but mounting drives is difficult. [Linux] Bash Shell.
