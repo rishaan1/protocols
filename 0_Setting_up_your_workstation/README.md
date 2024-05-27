@@ -85,7 +85,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
     - `miniforge` is the minimal open-source installation of conda and mamba, below. 
     - `mamba` is the open-source implementation. In the late 2010s, `conda`'s dependency solver algorithm became insufficient for the increasingly
     complex dependency trees of modern packages, so a group of freelance developers spun off `mamba`, which uses a faster algorithm but essentially
-    the same syntax, except sometimes substituting eg. `conda install` for `mamba install`. The solving algorithm is now an option in `conda` which 
+    the same syntax, except sometimes substituting eg. `mamba install` for `conda install`. The solving algorithm is now an option in `conda` which 
     we will set as default in this tutorial.
     - `micromamba` is the minimal installation of `mamba`.
 [^3]: `$PATH` is where the OS looks for executable commands, so that when you type "conda init", the system knows to run the `conda` command with the 
