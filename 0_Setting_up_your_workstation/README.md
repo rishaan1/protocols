@@ -14,12 +14,12 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 
 ## Tutorial
 0. Open a command line prompt.[^1] 
-1. [Download](https://docs.anaconda.com/free/miniconda/index.html) and run the miniconda[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`, `$PATH`, and environment variables.
+1. [Download](https://docs.anaconda.com/free/miniconda/index.html) and run the miniconda[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`[^3], `$PATH`, and environment variables.
    ```
    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
    bash Miniconda3-latest-Linux-x86_64.sh
    ```
-2. Add `conda` to `$PATH`.[^3]
+2. Add `conda` to `$PATH`.[^4]
    ```
    conda init
    ```
@@ -32,14 +32,14 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda config --prepend channels conda-forge # best practice is to have this one as top priority.
    conda config --set channel_priority strict
    ```
-   [^4] 
+   [^5] 
 5. We will now install our first package. The `mamba` dependency solver is an open-source improvement on base conda. 
    ```
    # Install the `mamba` dependency solver and set it to default.
    conda install --name base conda-libmamba-solver --yes
    conda config --set solver libmamba
    ```
-6. The `jupyter` project is a long-running effort to provide interoperability between data science languages Python and R.[^5]
+6. The `jupyter` project is a long-running effort to provide interoperability between data science languages Python and R.[^6]
    ```
    conda install jupyter
    ```
@@ -88,8 +88,9 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
     the same syntax, except sometimes substituting eg. `mamba install` for `conda install`. The solving algorithm is now an option in `conda` which 
     we will set as default in this tutorial.
     - `micromamba` is the minimal installation of `mamba`.
-[^3]: `$PATH` is where the OS looks for executable commands, so that when you type "conda init", the system knows to run the `conda` command with the 
+[^3]: `.bashrc`, `.bash_profile` etc. are scripts that are run whenever you open a command prompt.[^7] 
+[^4]: `$PATH` is where the OS looks for executable commands, so that when you type "conda init", the system knows to run the `conda` command with the 
   `init` parameter.
-[^4]: `# N.B. that comments in many programming languages are denoted by '#' and everything to the right is not part of the command.`
-[^5]: The Jupyter project also includes the relatively nascent programming language Julia, hence the name "ju-pyt-r".
-
+[^5]: `# N.B. that comments in many programming languages are denoted by '#' and everything to the right is not part of the command.`
+[^6]: The Jupyter project also includes the relatively nascent programming language Julia, hence the name "ju-pyt-r".
+[^7]: `.zshrc` and `.zsh_profile` on Mac OS.
