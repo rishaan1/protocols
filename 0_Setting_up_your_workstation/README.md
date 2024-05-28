@@ -14,16 +14,16 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 
 ## Tutorial
 0. Open a command line prompt.[^1] 
-1. [Download](https://docs.anaconda.com/free/miniconda/index.html) and run the miniconda[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`[^3], `$PATH`, and environment variables.
+1. [Download](https://docs.anaconda.com/free/miniconda/index.html) and run the miniconda[^2] installer corresponding to your operating system. Accept the EULA, install in default location, and let conda modify your `.bashrc`[^3], `$PATH`[^4], and environment variables.
    ```
    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
    bash Miniconda3-latest-Linux-x86_64.sh
    ```
-2. Add `conda` to `$PATH`.[^4]
+2. Add `conda` to `$PATH`.
    ```
    conda init
    ```
-   You may now notice that your shell prompt includes the `(base)` prefix eg. `(base) ochapman@12005L4953` indicating that you are now working in your
+   You may now notice that your shell prompt includes the `(base)` prefix eg. `(base) ochapman@12005L4953 %` indicating that you are now working in your
    *base* *environment*. More on that later.
 4. Add the usual bioinformatics package repositories.
    ```
