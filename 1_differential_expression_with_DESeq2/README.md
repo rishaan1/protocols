@@ -4,7 +4,7 @@ updated 2024-05-28
 
 ## Goal
 A common bioinformatics task is to identify features (eg., differentially expressed genes) in a genomics dataset (eg., RNA-seq of many samples) which are significantly different between phenotypes (eg., experimental and control treatments). 
-In the differential expression use case, a simple approach might be to perform a t-test between *GENE* expression values in experimental and control samples, correcting for multiple hypotheses if necessary.[^1] However, the differential expression use case   
+In the differential expression use case, a simple approach might be to perform a t-test between *GENE* expression values in experimental and control samples, correcting for multiple hypotheses if necessary.[^1] However, the differential expression use case 
 is common enough that a number of statistical tools have been developed specifically for this task.[^2] Here we use DESeq2.[^3]
 
 ## Dependencies
