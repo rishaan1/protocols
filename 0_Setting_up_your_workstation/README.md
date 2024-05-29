@@ -49,6 +49,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 
 7. My basic data analysis toolbox uses Python 3 and a few common packages:
    ```
+   # create a new conda environment named "py3"
    conda create --name py3
 
    # change environments by 'activating it'
@@ -64,6 +65,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda install ipykernel
    python -m ipykernel install --user --name py3 --display-name "py3" # this command adds your new environment to your jupyter installation.
 
+   # deactivate when you're done
    conda deactivate
    ```
    While your conda environment is active, the packages installed in that environment are added to your $PATH and available for use via Python, bash, or however you normally access them.
