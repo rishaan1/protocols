@@ -9,18 +9,32 @@ is common enough that a number of statistical tools have been developed specific
 
 ## Dependencies
 
-This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar results can be achieved using WSL (Windows). 
+This tutorial uses `conda`, `jupyter`, and of course the `DESeq2` R package.
+
+## Installation
+```
+conda create -n deseq2
+conda activate deseq2
+# conda config --env --set subdir osx-64  # uncomment this line if using a Mac with Apple silicon.
+conda install bioconductor-deseq2 r-irkernel
+R -e 'IRkernel::installspec(name="deseq2",displayname="deseq2")'
+```
 
 ## Tutorial
 
+Much of this tutorial is adapted from [the official DESeq2 tutorial](https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html). 
+Open the `deseq2.ipynb` jupyter notebook in this directory to continue the tutorial, setting the kernel to the "deseq2" kernel we just set up. 
+See [0_Setting_up_your_workstation](../0_Setting_up_your_workstation) for instructions on how to set up jupyter.
 
-[^1] *Multiple hypothesis correction.* If you test more than one hypothesis in an experiment, best practice is to adjust the p-value threshold at which we call a significant positive result. The intuition for this practice is as follows: suppose we were to test 
+## Footnotes
+
+[^1]: *Multiple hypothesis correction.* If you test more than one hypothesis in an experiment, best practice is to adjust the p-value threshold at which we call a significant positive result. The intuition for this practice is as follows: suppose we were to test 
 20,000 genes for differential expression between a random segregation of identically treated samples. Because there is no true biological difference, the true number of differentially expressed genes is zero. However, the number of positive results in our test 
 would be (number of tests) x (p-value threshold) = 20000 x 0.05 = 1000. In other words, if the null hypothesis is true and we perform 20,000 tests, we can expect a thousand false positive results. 
   
 To limit the number of false positives reported, we set a stricter threshold for reporting a positive result. I usually use *Benjamini-Hochberg correction*, which is implemented in the `statsmodels` package and many others including `DESeq2`. The resulting
 value after multiple hypothesis correction is called an "adjusted p-value" or "q-value".
 
-[^2] Besides `DESeq2`, the R packages `limma`, `edgeR`, and `sleuth` are commonly used for differential expression analysis.
+[^2]: Besides `DESeq2`, the R packages `limma`, `edgeR`, and `sleuth` are commonly used for differential expression analysis.
 
-[^3] [Love, M.I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol 15, 550 (2014).](https://doi.org/10.1186/s13059-014-0550-8)
+[^3]: [Love, M.I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol 15, 550 (2014).](https://doi.org/10.1186/s13059-014-0550-8)
