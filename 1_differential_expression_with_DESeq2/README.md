@@ -16,7 +16,7 @@ This tutorial uses `conda`, `jupyter`, and of course the `DESeq2` R package.
 conda create -n deseq2
 conda activate deseq2
 # conda config --env --set subdir osx-64  # uncomment this line if using a Mac with Apple silicon.
-conda install bioconductor-deseq2 r-irkernel
+conda install bioconductor-deseq2 jupyter r-irkernel
 R -e 'IRkernel::installspec(name="deseq2",displayname="deseq2")'
 ```
 
