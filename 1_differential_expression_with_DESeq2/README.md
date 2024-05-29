@@ -1,6 +1,6 @@
 # Differential expression analysis with DESeq2
 
-# updated 2024-05-28
+updated 2024-05-28
 
 ## Goal
 A common bioinformatics task is to identify features (eg., differentially expressed genes) in a genomics dataset (eg., RNA-seq of many samples) which are significantly different between phenotypes (eg., experimental and control treatments). 
