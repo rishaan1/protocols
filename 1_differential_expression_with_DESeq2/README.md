@@ -31,9 +31,8 @@ See [0_Setting_up_your_workstation](../0_Setting_up_your_workstation) for instru
 [^1]: *Multiple hypothesis correction.* If you test more than one hypothesis in an experiment, best practice is to adjust the p-value threshold at which we call a significant positive result. The intuition for this practice is as follows: suppose we were to test 
 20,000 genes for differential expression between a random segregation of identically treated samples. Because there is no true biological difference, the true number of differentially expressed genes is zero. However, the number of positive results in our test 
 would be (number of tests) x (p-value threshold) = 20000 x 0.05 = 1000. In other words, if the null hypothesis is true and we perform 20,000 tests, we can expect a thousand false positive results. 
-  
-To limit the number of false positives reported, we set a stricter threshold for reporting a positive result. I usually use *Benjamini-Hochberg correction*, which is implemented in the `statsmodels` package and many others including `DESeq2`. The resulting
-value after multiple hypothesis correction is called an "adjusted p-value" or "q-value".
+  To limit the number of false positives reported, we set a stricter threshold for reporting a positive result. I usually use *Benjamini-Hochberg correction*, which is implemented in the `statsmodels` package and many others including `DESeq2`. The resulting
+  value after multiple hypothesis correction is called an "adjusted p-value" or "q-value".
 
 [^2]: Besides `DESeq2`, the R packages `limma`, `edgeR`, and `sleuth` are commonly used for differential expression analysis.
 
