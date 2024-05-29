@@ -62,7 +62,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 
    # ipykernel gives the jupyter access to this environment and all packages installed here.
    conda install ipykernel
-   python -m ipykernel install --user --name py3 --display-name "py3"
+   python -m ipykernel install --user --name py3 --display-name "py3" # this command adds your new environment to your jupyter installation.
 
    conda deactivate
    ```
