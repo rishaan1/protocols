@@ -22,6 +22,8 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
 2. Add `conda` to `$PATH`.
    ```
    conda init
+   # conda prompts you to close and re-open your shell but you can just
+   source ~/.bashrc
    ```
    You may now notice that your shell prompt includes the `(base)` prefix eg. `(base) ochapman@12005L4953 %` indicating that you are now working in your
    *base* *environment*. More on that later.
