@@ -64,7 +64,7 @@ This tutorial was written and tested on Mac OS 13.5 and Ubuntu 16. Similar resul
    conda install matplotlib seaborn --yes
 
    # ipykernel gives the jupyter access to this environment and all packages installed here.
-   conda install ipykernel
+   conda install ipykernel --yes
    python -m ipykernel install --user --name py3 --display-name "py3" # this command adds your new environment to your jupyter installation.
 
    # deactivate when you're done
